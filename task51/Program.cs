@@ -55,6 +55,7 @@ int GetDiagonalSum(int[,] matrix)
 
 int lines = Input();
 int columns = Input();
+Console.WriteLine();
 int[,] myMatrix = GetRandomMatrix(lines, columns);
 PrintMatrix(myMatrix);
 int sumOfDiagonal = GetDiagonalSum(myMatrix);
