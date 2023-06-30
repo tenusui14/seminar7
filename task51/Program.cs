@@ -36,22 +36,38 @@ void PrintMatrix(int[,] matrix)
         Console.WriteLine();
     }
 }
+// int GetDiagonalSum(int[,] matrix)
+// {
+//     int sum = 0;
+//     for (int i = 0; i < matrix.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < matrix.GetLength(1); j++)
+//         {
+//             if (i == j)
+//             {
+//                 sum += matrix[i, j];
+//             }
+//         }
+
+//     }
+//     return sum;
+// }
 int GetDiagonalSum(int[,] matrix)
 {
     int sum = 0;
-    for (int i = 0; i < matrix.GetLength(0); i++)
+    int min = matrix.GetLength(0);
+    if (min > matrix.GetLength(1))
     {
-        for (int j = 0; j < matrix.GetLength(1); j++)
-        {
-            if (i == j)
-            {
-                sum += matrix[i, j];
-            }
-        }
-
+        min = matrix.GetLength(1);
+    }
+    for (int i = 0; i < min; i++)
+    {
+        sum += matrix[i, i];
     }
     return sum;
 }
+
+
 
 int lines = Input();
 int columns = Input();
