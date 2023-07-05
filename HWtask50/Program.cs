@@ -44,7 +44,7 @@ void PrintMatrix(int[,] matrix)
 }
 
 bool CheckRange(int[,] matrix, int line, int column){
-    if (line > matrix.GetLength(0) || column > matrix.GetLength(1)){
+    if (line >= matrix.GetLength(0) || column >= matrix.GetLength(1)){
         Console.WriteLine("Такого элемента нет");
         return false;
     }
